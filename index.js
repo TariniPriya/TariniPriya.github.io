@@ -12,6 +12,10 @@ const addTask = () => {
         document.getElementById("list").appendChild(li)
         document.getElementById("task").value = "";
         updateCount();
+        li.addEventListener("click", ()=>{
+            li.parentNode.removeChild(li);
+            updateCount();
+        })
     }
 }
 
